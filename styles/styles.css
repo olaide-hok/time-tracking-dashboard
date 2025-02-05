@@ -1,0 +1,32 @@
+/* General body styling */
+body {
+  position: relative; /* Ensures the body is positioned relative to its normal flow */
+  font-family: "Roboto";
+  font-feature-settings: "liga" off, "clig" off;
+  background: #0e1323;
+}
+
+/* Media query for screens with a width of up to 375px */
+@media screen and (max-width: 375px) {
+  body {
+    min-height: 100%; /* Ensures the body takes up at least the full height of its parent container */
+  }
+}
+.copy_body {
+  font-size: 1rem;
+  color: #242742;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.error_text {
+  color: #ff6155;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: #36384d;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

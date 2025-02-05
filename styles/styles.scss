@@ -1,0 +1,53 @@
+@use "functions" as *;
+@use "variables" as *;
+
+/* General body styling */
+body {
+  position: relative; /* Ensures the body is positioned relative to its normal flow */
+  // display: flex; /* Enables flexbox layout */
+  // justify-content: center; /* Centers content horizontally */
+  // align-items: center; /* Centers content vertically */
+  // min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
+  font-family: $font-family;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  background: #0e1323;
+}
+
+/* Media query for screens with a width of up to 375px */
+@media screen and (max-width: 375px) {
+  body {
+    min-height: 100%; /* Ensures the body takes up at least the full height of its parent container */
+  }
+}
+
+// Utilities
+
+button {
+}
+
+.body_small {
+}
+
+.heading {
+}
+
+.copy_body {
+  font-size: $text-preset-body-font-size;
+  color: $dark-navy;
+  font-weight: $text-preset-body-regular-font-weight;
+  line-height: $text-preset-body-line-height;
+}
+
+.error_text {
+  color: $vermillion;
+}
+
+// Mobile first approach
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: $pale-navy;
+  }
+}
