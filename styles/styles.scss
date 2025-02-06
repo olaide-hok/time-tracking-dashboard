@@ -116,10 +116,13 @@ body {
 
     .tile {
       height: rem(160px);
-      background: rgba(255, 139, 100, 0.6) url("../images/icon-work.svg") top
-        right no-repeat;
       position: relative;
       border-radius: 15px;
+
+      img {
+        float: right;
+        margin-right: rem(17.4px);
+      }
 
       .details {
         border-radius: 15px;

@@ -98,9 +98,12 @@ body {
 }
 .container .tiles_wrapper .tile {
   height: 10rem;
-  background: rgba(255, 139, 100, 0.6) url("../images/icon-work.svg") top right no-repeat;
   position: relative;
   border-radius: 15px;
+}
+.container .tiles_wrapper .tile img {
+  float: right;
+  margin-right: 1.0875rem;
 }
 .container .tiles_wrapper .tile .details {
   border-radius: 15px;
