@@ -1,8 +1,13 @@
 /* General body styling */
 body {
   position: relative; /* Ensures the body is positioned relative to its normal flow */
-  font-family: "Roboto";
-  font-feature-settings: "liga" off, "clig" off;
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
+  font-family: Rubik;
+  font-style: normal;
+  line-height: normal;
   background: #0e1323;
 }
 
@@ -12,20 +17,162 @@ body {
     min-height: 100%; /* Ensures the body takes up at least the full height of its parent container */
   }
 }
-.copy_body {
-  font-size: 1rem;
-  color: #242742;
+.activity-name {
+  color: #fff;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 150%;
 }
 
-.error_text {
-  color: #ff6155;
+.duration {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.timeframe {
+  color: #bbc0ff;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 5.0625rem 1.5rem;
+}
+.container .profile-tile {
+  border-radius: 15px;
+  background: #1c204b;
+}
+.container .profile-tile .bio {
+  display: flex;
+  align-items: center;
+  column-gap: 1.25rem;
+  border-radius: 15px;
+  background: #5747ea;
+  height: 8.3125rem;
+  padding: 2.1875rem 2.25rem 2.125rem 2rem;
+  column-gap: 1.25rem;
+}
+.container .profile-tile .bio img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+}
+.container .profile-tile .bio .data span {
+  color: #bbc0ff;
+  font-size: 15px;
+  font-weight: 400;
+}
+.container .profile-tile .bio .data p {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+}
+.container .profile-tile .timeframes {
+  display: flex;
+  padding: 1.5rem 0;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container .profile-tile .timeframes button {
+  color: #7078c9;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+}
+.container .profile-tile .timeframes button.active {
+  color: #ffffff;
+}
+.container .profile-tile .timeframes button:hover, .container .profile-tile .timeframes button:focus {
+  color: #ffffff;
+  cursor: pointer;
+}
+.container .tiles_wrapper {
+  display: grid;
+  gap: 1.5rem;
+}
+.container .tiles_wrapper .tile {
+  height: 10rem;
+  background: rgba(255, 139, 100, 0.6) url("../images/icon-work.svg") top right no-repeat;
+  position: relative;
+  border-radius: 15px;
+}
+.container .tiles_wrapper .tile .details {
+  border-radius: 15px;
+  background: #1c204b;
+  height: 7.625rem;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 0.4375rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.container .tiles_wrapper .tile .details:hover {
+  cursor: pointer;
+  background: #33397a;
+}
+.container .tiles_wrapper .tile .details div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .tiles_wrapper .tile .details div svg:hover path {
+  fill: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    background-color: #36384d;
+  .container {
+    flex-direction: row;
+    max-width: 69.375rem;
+    width: 100%;
+  }
+  .container .profile-tile .bio {
+    padding: 2.3125rem 5.3125rem 5rem 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+  .container .profile-tile .bio img {
+    margin-bottom: 2.6875rem;
+    width: 78px;
+    height: 78px;
+  }
+  .container .profile-tile .bio .data p {
+    font-size: 2.5rem;
+  }
+  .container .profile-tile .timeframes {
+    flex-direction: column;
+    padding: 1.625rem 0 2.0625rem 2rem;
+    align-items: flex-start;
+    row-gap: 1.3125rem;
+  }
+  .container .tiles_wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+  .container .tiles_wrapper .tile {
+    height: 15.3125rem;
+  }
+  .container .tiles_wrapper .tile .details {
+    height: 12.5rem;
+    justify-content: unset;
+    row-gap: 1.5rem;
+    padding: 1.8125rem 2.1875rem 2rem 1.875rem;
+  }
+  .container .tiles_wrapper .tile .details .activity {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .container .tiles_wrapper .tile .details .activity .duration {
+    font-size: 56px;
   }
 }
 
