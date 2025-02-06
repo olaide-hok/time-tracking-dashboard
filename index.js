@@ -60,7 +60,7 @@ const appendItem = (item, tf) => {
                 ? "rgba(85, 194, 230, 1)"
                 : null
   }">
-      <img src="./images/icon-${item.title}.svg" onerror="this.src='./images/icon-self-care.svg'"  alt="image-${item.title}">
+      <img src="./images/icon-${item.title.toLowerCase()}.svg" alt="image-${item.title.toLowerCase()}">
       <div class="details">
         <div class="title">
           <p class="activity-name">${item.title}</p>
