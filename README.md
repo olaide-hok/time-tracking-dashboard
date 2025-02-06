@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://olaide-hok.github.io/time-tracking-dashboard/)
+- Solution URL: [Link](https://olaide-hok.github.io/time-tracking-dashboard/)
 
 ## My process
 
